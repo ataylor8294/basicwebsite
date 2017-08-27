@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+	<head>
+	<title>
+	</title>
+	<link rel="stylesheet" type="text/css" href="layout-styles.css">
+	</head>
+	<body class="center">
+	Quiz about Andrew
+		<div id="quiz">
+			<form id="myquiz">
+				<footer>
+					What is my name?
+					<p>
+					
+					</p>
+					<input type="text" id="name" placeholder="Please enter name"></input>
+					<p>
+				
+				
+					What is my age?
+					</p>
+			        	<input type="text" id="age" placeholder="Please enter age"></input>
+			        
+			        	<p>
+			        	
+			        	What is my gender?
+			        	</p>
+			        	<input type="radio" name="gender" value="male"> Male<br>
+ 					<input type="radio" name="gender" value="female"> Female<br>
+  					<input type="radio" name="gender" value="other"> Other<br>
+  					<input type="radio" name="gender" value="Apache Helicopter"> Apache Helicopter
+			        	
+			        	<p>
+			        
+			        
+			        	Do i like Brownies?
+			        	Checkbox: <input type="checkbox" id="myCheck1">
+			       		 </p>
+
+					 
+					 <p>
+			        
+			        
+			        	 Do i like Broccili?
+			        	 Checkbox: <input type="checkbox" id="myCheck2">
+			       		 </p>
+					 <p>
+			        
+			        
+                                         What is my favorite sport?
+			       		 </p>
+					 <select id="drop" name="drop">
+  						<option value="Baseball">Baseball</option>
+  						<option value="Soccer">Soccer</option>
+  						<option value="Basketball">Basketball</option>
+  						<option value="Football">Football</option>
+					</select>
+					 <p>
+					 
+					 
+					 </p>
+			       		 <input type = "button" id="SubmitButton" name="Submit" value="Submit for Validation" onclick = "myFunction()" ></input><br>
+					<input type = "reset" id="ResetButton" name="Reset" value="Reset Form Fields"></input><br>
+			</form>
+
+	<script>
+		function Result(){
+			var name = document.getElementById("name").value;
+			var age = document.getElementById("age").value;
+			var gender = document.getElementById("gender").value;
+			var brown =document.getElementById("myCheck1").value;
+			if (name!="Andrew"){
+				corrections= corrections+ "My name is andrew! /n";
+			}
+			else{
+				correct++;
+			}
+			if (age!=21){
+				corrections= corrections+ "My age is 21! /n";
+			else{
+				correct++;
+			}
+			if (gender!="male"){
+				corrections= corrections+ "My gender is male! /n";
+			else{
+				correct++;
+			}
+			if (!brown){
+				corrections= corrections+ "I love brownies! /n";
+			else{
+				correct++;
+			}
+			window.alert("The percent correct is "100*( float(correct)/4));
+		}
+function myFunction(){
+}
+</script>
+
+	</body>
+</html>
